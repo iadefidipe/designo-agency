@@ -1,0 +1,10 @@
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2.625rem;
+}
+
+.nav a {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}

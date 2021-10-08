@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 0;
+}
+
+.hamburger {
+  display: none;
+}
+
+.header nav {
+  display: flex;
+}
+
+@media (max-width: 720px) {
+  .hamburger {
+    display: block;
+  }
+  .header nav {
+    display: none;
+  }
+}
