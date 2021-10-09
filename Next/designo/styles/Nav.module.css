@@ -5,6 +5,12 @@
 }
 
 .nav a {
+  font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 2px;
+  border-bottom: 1px solid none;
+}
+
+.nav a:hover {
+  border-bottom: 1px solid var(--clr-pry-black);
 }

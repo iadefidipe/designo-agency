@@ -13,7 +13,7 @@ const Header = () => {
             <Logo src={ menuData.header.logo} alt={menuData.header.alt}  />
             <Nav />
             <div className={Styles.hamburger}>
-                <Image src={ toggle ? menuData.mobileDrop.close : menuData.mobileDrop.hamburger} alt='mobile-menu' width={24} height= {20}  />
+                <Image src={ toggle ? menuData.mobileDrop.close : menuData.mobileDrop.hamburger} alt='mobile-menu' width={24} height= {20} onClick={ () => setToggle(!toggle) } />
             </div>
             
         </header>

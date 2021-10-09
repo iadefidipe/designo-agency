@@ -15,8 +15,8 @@ export const menuData = {
     label: "visit homepage",
   },
   footer: {
-    footerLogo: logoLight,
-    footerLogoAlt: "designo",
+    logo: logoLight,
+    alt: "designo",
     label: "go back to homepage",
   },
   homeLink: "/",
