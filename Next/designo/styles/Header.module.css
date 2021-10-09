@@ -5,7 +5,8 @@
   padding: 35px 0;
 }
 
-.hamburger {
+.hamburger,
+.mobileMenu nav {
   display: none;
 }
 

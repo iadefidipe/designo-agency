@@ -1,4 +1,5 @@
 .footer {
+  margin-top: 500px;
   background: var(--clr-pry-black);
   padding: 50px 0;
 }
@@ -10,18 +11,19 @@
   border-bottom: none;
 }
 
-.footerHeader {
+.footerHeader,
+.footerContent {
   display: flex;
   justify-content: space-between;
+}
+
+.footerHeader {
   align-items: center;
   border-bottom: 1px solid var(--clr-sec-dark-grey);
   padding: 30px 0;
 }
 
 .footerContent {
-  display: flex;
-  justify-content: space-between;
-  align-content: flex-end;
   color: var(--clr-pry-white);
 }
 
