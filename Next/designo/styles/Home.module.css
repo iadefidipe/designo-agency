@@ -27,8 +27,6 @@
 
 .heroRight {
   position: relative;
-
-  border: 1px solid blue;
 }
 
 .heroRight > div {
@@ -37,7 +35,6 @@
   left: 0;
   right: -150px;
   bottom: 0;
-  border: 1px solid red;
 }
 
 @media (max-width: 1300px) {
@@ -70,6 +67,9 @@
   }
 }
 @media (max-width: 660px) {
+  .hero {
+    background-position: 200px center;
+  }
   .heroRight > div {
     top: -150px;
   }
@@ -79,4 +79,15 @@
   .heroRight > div {
     top: -50px;
   }
+  .hero {
+    background-position: left center;
+  }
+}
+
+@media (max-width: 350px) {
+  .heroRight > div {
+    top: 0px;
+  }
+}
+@media (max-width: 400px) {
 }
