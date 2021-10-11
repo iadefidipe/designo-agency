@@ -67,6 +67,31 @@ p {
   line-height: 1.625rem;
 }
 
+.btn-light,
+.btn-dark {
+  border: none;
+  width: 152px;
+  height: 56px;
+  text-align: center;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-size: 0.9375rem;
+  font-weight: var(--weight-med);
+  letter-spacing: 1px;
+  transition: all 250ms ease-in-out;
+}
+
+.btn-dark:hover,
+.btn-light {
+  color: var(--clr-pry-white);
+  background: var(--clr-sec-peach);
+}
+
+.btn-light {
+  color: var(--clr-pry-white);
+  background: var(--clr-pry-peach);
+}
+
 /* page padding */
 .page-container {
   padding: 0 10.3125rem;
@@ -81,6 +106,14 @@ p {
 @media (max-width: 768px) {
   .page-container {
     padding: 0 2.5rem;
+  }
+}
+
+@media (max-width: 680px) {
+  h1 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+    font-weight: var(--weight-med);
   }
 }
 
