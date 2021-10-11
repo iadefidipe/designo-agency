@@ -1,0 +1,82 @@
+.container {
+  position: relative;
+}
+
+.hero {
+  background: url("../public/assets/home/desktop/bg-pattern-hero-home.svg")
+    no-repeat right;
+  background-color: var(--clr-pry-peach);
+  height: 40rem;
+  border-radius: 15px;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  padding: 0 95px;
+  overflow: hidden;
+}
+
+.hero * {
+  flex: 1;
+}
+
+.heroLeft {
+  flex: 1.5;
+  color: var(--clr-pry-white);
+}
+
+.heroRight {
+  position: relative;
+
+  border: 1px solid blue;
+}
+
+.heroRight > div {
+  position: absolute;
+  top: -300px;
+  left: 0;
+  right: -150px;
+  bottom: 0;
+  border: 1px solid red;
+}
+
+@media (max-width: 1300px) {
+  .hero {
+    flex-direction: column;
+  }
+  .heroRight {
+    min-width: 100%;
+  }
+
+  .heroRight > div {
+    top: -100px;
+    right: 0;
+    left: 0;
+  }
+  .heroLeft {
+    margin-top: 50px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 52.6875rem;
+    background-position: 250px center;
+    padding: 0 24px;
+  }
+  .heroRight > div {
+    top: -200px;
+  }
+}
+@media (max-width: 660px) {
+  .heroRight > div {
+    top: -150px;
+  }
+}
+
+@media (max-width: 545px) {
+  .heroRight > div {
+    top: -50px;
+  }
+}
