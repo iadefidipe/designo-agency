@@ -2,7 +2,7 @@ import React from 'react'
 import Logo from './Logo'
 import { menuData } from '../data/menuData'
 import Nav from './Nav'
-import styles from '../styles/Footer.module.css'
+import styles from '../styles/modules/Footer.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -13,7 +13,7 @@ const Footer = () => {
             <div className='page-container' >
 
                 <div className={styles.footerHeader} >
-                    <Logo src={ menuData.footer.logo} alt={menuData.footer.alt}  />
+                    <Logo  scroll={true} href={menuData.homeLink} src={ menuData.footer.logo} alt={menuData.footer.alt}  />
 
                     <Nav />
                 </div>

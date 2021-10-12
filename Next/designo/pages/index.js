@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/modules/Home.module.css'
 import { homeData } from '../data/homeData'
+import ProjectCards from '../comps/ProjectCards'
+import { portfolioData } from '../data/portfolioData'
 
 export default function Home() {
   return (
@@ -17,20 +19,18 @@ export default function Home() {
         <div className={styles.heroRight} >
           
           <div>
-   <Image src={homeData.image.srcDesktop} alt={homeData.image.alt} className={styles.heroimg} layout='responsive'/>
-
-
-
-          </div>
-
-         
-          
-            
-
-          
-          
+            <Image src={homeData.image.srcDesktop} alt={homeData.image.alt} className={styles.heroimg} layout='responsive'/>
+          </div>        
         </div>
         
+      </section>
+
+      <section className={styles.portfolioCard} >
+        {
+          portfolioData.map( (portfolio, index) =>(
+            <ProjectCards header={portfolio.header} link={portfolio.link} cta={portfolio.cta} image={portfolio.image} key={index} />
+          ) )
+        }       
       </section>
     </div>
   )

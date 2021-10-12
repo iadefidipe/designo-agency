@@ -2,11 +2,15 @@
   position: relative;
 }
 
+.hero,
+.portfolioCard {
+  height: 40rem;
+}
+
 .hero {
-  background: url("../public/assets/home/desktop/bg-pattern-hero-home.svg")
+  background: url("../../public/assets/home/desktop/bg-pattern-hero-home.svg")
     no-repeat right;
   background-color: var(--clr-pry-peach);
-  height: 40rem;
   border-radius: 15px;
   position: relative;
 
@@ -37,6 +41,21 @@
   bottom: 0;
 }
 
+.portfolioCard {
+  margin: 160px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 24px;
+  column-gap: 30px;
+  color: var(--clr-pry-white);
+}
+
+.portfolioCard > div:first-child {
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+
 @media (max-width: 1300px) {
   .hero {
     flex-direction: column;
@@ -64,6 +83,16 @@
   }
   .heroRight > div {
     top: -200px;
+  }
+
+  .portfolioCard {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .portfolioCard > div:first-child {
+    grid-column: unset;
+    grid-row: unset;
   }
 }
 @media (max-width: 660px) {

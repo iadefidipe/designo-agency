@@ -3,7 +3,7 @@ import Logo from './Logo'
 import Nav from './Nav'
 import { menuData } from '../data/menuData'
 import Image from 'next/image'
-import Styles from '../styles/Header.module.css'
+import Styles from '../styles/modules/Header.module.css'
 import MobileMenu from './MobileMenu'
 
 const Header = () => {
@@ -11,7 +11,7 @@ const Header = () => {
     
     return (
         <header className={Styles.header}  >
-            <Logo src={ menuData.header.logo} alt={menuData.header.alt}  />
+            <Logo href={menuData.homeLink} src={ menuData.header.logo} alt={menuData.header.alt} />
             <Nav />
             <div className={Styles.hamburger}>
                 <Image src={ toggle ? menuData.mobileDrop.close : menuData.mobileDrop.hamburger} alt='mobile-menu' width={24} height= {20} onClick={ () => setToggle(!toggle) } />

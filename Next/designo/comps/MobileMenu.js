@@ -1,6 +1,6 @@
 import React from 'react'
 import Nav from './Nav'
-import Styles from '../styles/Header.module.css'
+import Styles from '../styles/modules/Header.module.css'
 
 
 const MobileMenu = () => {
