@@ -4,6 +4,7 @@ import styles from '../styles/modules/Home.module.css'
 import { homeData } from '../data/homeData'
 import ProjectCards from '../comps/ProjectCards'
 import { portfolioData } from '../data/portfolioData'
+import QualitiesCard from '../comps/QualitiesCard'
 
 export default function Home() {
   return (
@@ -31,6 +32,12 @@ export default function Home() {
             <ProjectCards header={portfolio.header} link={portfolio.link} cta={portfolio.cta} image={portfolio.image} key={index} />
           ) )
         }       
+      </section>
+
+      <section className={styles.qualities} >
+        {homeData.qualities.map( (quality,index) => (
+          <QualitiesCard key={index} src={quality.image} alt={quality.imageAlt} header={quality.header} des={quality.description} bg={homeData.bg} />
+        )  )}
       </section>
     </div>
   )

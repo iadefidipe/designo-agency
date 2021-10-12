@@ -4,12 +4,14 @@ import phoneDesktop from "../public/assets/home/desktop/image-hero-new.png"
 import passionate from "../public/assets/home/desktop/illustration-passionate.svg";
 import resourceful from "../public/assets/home/desktop/illustration-resourceful.svg";
 import friendly from "../public/assets/home/desktop/illustration-friendly.svg";
+import bg from "../public/assets/shared/desktop/bg-pattern-small-circle.svg"
 
 
 export const homeData = {
   header: "Award-winning custom designs and digital branding solutions",
   subHeader:
     "With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and engaging brand experiences. Find out more about our services.",
+    bg:bg,
   button: {
     title: "learn more",
     link: "/about",
