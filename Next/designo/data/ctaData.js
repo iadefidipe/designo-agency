@@ -1,3 +1,5 @@
+import bg from '../public/assets/shared/desktop/bg-pattern-call-to-action.svg'
+
 export const ctaData = {
     header: "Let’s talk about your project",
     subHeader:
@@ -6,4 +8,5 @@ export const ctaData = {
       title: "get in touch",
       link: "/contact",
     },
+    bg
 }

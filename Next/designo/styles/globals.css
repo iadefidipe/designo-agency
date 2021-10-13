@@ -13,6 +13,8 @@ a {
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
@@ -65,31 +67,6 @@ h3 {
 p {
   font-size: 1 rem;
   line-height: 1.625rem;
-}
-
-.btn-light,
-.btn-dark {
-  border: none;
-  width: 152px;
-  height: 56px;
-  text-align: center;
-  border-radius: 8px;
-  text-transform: uppercase;
-  font-size: 0.9375rem;
-  font-weight: var(--weight-med);
-  letter-spacing: 1px;
-  transition: all 250ms ease-in-out;
-}
-
-.btn-dark:hover,
-.btn-light {
-  color: var(--clr-pry-white);
-  background: var(--clr-sec-peach);
-}
-
-.btn-light {
-  color: var(--clr-pry-white);
-  background: var(--clr-pry-peach);
 }
 
 /* page padding */

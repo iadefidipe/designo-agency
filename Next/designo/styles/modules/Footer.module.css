@@ -1,7 +1,6 @@
 .footer {
-  margin-top: 500px;
   background: var(--clr-pry-black);
-  padding: 50px 0;
+  padding: 144px 0 50px;
 }
 
 .footer nav {
@@ -38,9 +37,10 @@
   gap: 16px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .footer {
     text-align: center;
+    padding: 166px 0 50px;
   }
   .footerHeader > div {
     width: 100%;
@@ -67,5 +67,11 @@
   .footer nav {
     margin-top: 3rem;
     gap: 32px;
+  }
+}
+
+@media (max-width: 375px) {
+  .footer {
+    padding: 235px 0 50px;
   }
 }

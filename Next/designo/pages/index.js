@@ -5,6 +5,8 @@ import { homeData } from '../data/homeData'
 import ProjectCards from '../comps/ProjectCards'
 import { portfolioData } from '../data/portfolioData'
 import QualitiesCard from '../comps/QualitiesCard'
+import Cta from '../comps/Cta'
+import Button from '../comps/Button'
 
 export default function Home() {
   return (
@@ -14,7 +16,7 @@ export default function Home() {
         <div className={styles.heroLeft}>
           <h1>Award-winning custom designs and digital branding solutions</h1>
           <p>With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and engaging brand experiences. Find out more about our services.</p>
-          <button className=' btn btn-dark ' >Learn more</button>
+          <Button color={"dark"} text={homeData.button.title} link={homeData.button.link} label={homeData.button.label} />
         </div>
 
         <div className={styles.heroRight} >
@@ -26,19 +28,27 @@ export default function Home() {
         
       </section>
 
-      <section className={styles.portfolioCard} >
-        {
-          portfolioData.map( (portfolio, index) =>(
-            <ProjectCards header={portfolio.header} link={portfolio.link} cta={portfolio.cta} image={portfolio.image} key={index} />
-          ) )
-        }       
-      </section>
+      
+        <section className={styles.portfolioCard} >
+          {
+            portfolioData.map( (portfolio, index) =>(
+              <ProjectCards header={portfolio.header} link={portfolio.link} cta={portfolio.cta} image={portfolio.image} key={index} />
+            ) )
+          }
+        </section>
+      <div className={styles.innerContainer}>
+        <section className={styles.qualities} >
+          {homeData.qualities.map( (quality,index) => (
+            <QualitiesCard key={index} src={quality.image} alt={quality.imageAlt} header={quality.header} des={quality.description} bg={homeData.bg} />
+          )  )}
+        </section>
 
-      <section className={styles.qualities} >
-        {homeData.qualities.map( (quality,index) => (
-          <QualitiesCard key={index} src={quality.image} alt={quality.imageAlt} header={quality.header} des={quality.description} bg={homeData.bg} />
-        )  )}
-      </section>
+        <section className={styles.ctaContainer}>
+          <Cta />
+        </section>
+      </div>
+
+      
     </div>
   )
 }

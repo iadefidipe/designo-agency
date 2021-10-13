@@ -8,6 +8,7 @@ export const CardContainer = styled.div`
     text-transform: uppercase;
     text-align: center;
     background: url(${({image}) => image.src}) no-repeat ;
+    background-size: cover;
     border-radius: 15px;
     padding: 20px 0;
     
