@@ -85,6 +85,8 @@
 }
 
 .innerContainer {
+  background: url("../../public/assets/shared/desktop/bg-pattern-leaf.svg")
+    no-repeat 300px center;
 }
 
 .ctaContainer {
@@ -116,6 +118,9 @@
   }
   .ctaContainer {
     transform: translateY(150px);
+  }
+  .innerContainer {
+    background: none;
   }
 }
 
