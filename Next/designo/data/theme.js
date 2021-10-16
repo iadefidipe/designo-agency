@@ -1,9 +1,19 @@
-const theme ={
+import ctaBg from '../public/assets/shared/desktop/bg-pattern-call-to-action.svg'
+import leaf from '../public/assets/shared/desktop/bg-pattern-leaf.svg'
+import smCircle from '../public/assets/shared/desktop/bg-pattern-small-circle.svg'
+import threeCircle from '../public/assets/shared/desktop/bg-pattern-three-circles.svg'
+import twoCircle from '../public/assets/shared/desktop/bg-pattern-two-circles.svg'
+import introTablet from '../public/assets/shared/tablet/bg-pattern-design-pages-intro-tablet.svg'
+import introMobile from '../public/assets/shared/tablet/bg-pattern-design-pages-intro-tablet.svg'
+
+
+const theme = {
     colors:{
         pryPeach: 'hsl(11, 73%, 66%)',
         pryBlack: 'hsl(270, 3%, 11%)',
         pryWhite: 'hsl(0, 0%, 100%)',
-        secPeach: 'hsl(11, 100%, 80%)',      secDarkGrey: 'hsl(264, 5%, 20%)',
+        secPeach: 'hsl(11, 100%, 80%)',    
+        secDarkGrey: 'hsl(264, 5%, 20%)',
         secLightGrey: 'hsl(210, 17%, 95%)',
     },
     font:{
@@ -20,7 +30,17 @@ const theme ={
       deskMini: `${976/16}rem`,
       deskMid: `${1129/16}rem`
 
-    }
+    },
+    background:{
+      ctaBg,
+      twoCircle,
+      threeCircle,
+      leaf,
+      smCircle,
+      introMobile,
+      introTablet
+    },
+    bRadius: '15px'
 }
 
 export default theme

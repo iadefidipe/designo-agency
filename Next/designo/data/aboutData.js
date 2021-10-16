@@ -8,7 +8,7 @@ import dealMobile from "../public/assets/about/mobile/image-real-deal.jpg";
 import dealTablet from "../public/assets/about/tablet/image-real-deal.jpg";
 import dealDesktop from "../public/assets/about/desktop/image-real-deal.jpg";
 
-export const aboutData = {
+const aboutData = {
   sectionOne: {
     header: "About Us",
     content: {
@@ -48,3 +48,5 @@ export const aboutData = {
     },
   },
 };
+
+export default aboutData

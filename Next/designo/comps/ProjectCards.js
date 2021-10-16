@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import React from 'react'
-import { CardContainer, CardCta, CardHeader } from '../styles/styled-components/ProjectCard.style'
+import { CardContainer, CardCta, CardHeader } from '../styles/styled-components/component-styles/ProjectCard.style'
 
 
 

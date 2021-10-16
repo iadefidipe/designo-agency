@@ -1,5 +1,5 @@
 import React from 'react'
-import { CtaContainer, CtaDiv, CtaHeader } from '../styles/styled-components/Cta.style'
+import { CtaContainer, CtaDiv, CtaHeader } from '../styles/styled-components/component-styles/Cta.style'
 import { ctaData } from '../data/ctaData'
 import Button from './Button'
 
