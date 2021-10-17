@@ -1,11 +1,11 @@
 import React from 'react'
-import { AboutImage, AboutSection, ImageDiv, InnerDiv, ns, StyledAbout } from '../styles/styled-components/page style/about.style'
+import { AboutImage, AboutSection, ImageDiv, InnerDiv, , StyledAbout } from '../styles/styled-components/page style/about.style'
 import data from '../data/aboutData'
 
 const about = () => {
     return (
         <StyledAbout>
-            <AboutSection>
+            {/* <AboutSection>
 
                 <InnerDiv>
                     <h1>{data.sectionOne.header}</h1>
@@ -19,7 +19,7 @@ const about = () => {
 
                 
 
-            </AboutSection>
+            </AboutSection> */}
         </StyledAbout>
     )
 }
