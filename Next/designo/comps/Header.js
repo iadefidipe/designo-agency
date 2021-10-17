@@ -3,23 +3,26 @@ import Logo from './Logo'
 import Nav from './Nav'
 import { menuData } from '../data/menuData'
 import Image from 'next/image'
-import Styles from '../styles/modules/Header.module.css'
 import MobileMenu from './MobileMenu'
+import { StyledHamburger, StyledHeader } from '../styles/component-styles/Header.style'
 
 const Header = () => {
     const [toggle, setToggle] = useState(false)
     
     return (
-        <header className={Styles.header}  >
+        
+        <StyledHeader  >
+            
             <Logo href={menuData.homeLink} src={ menuData.header.logo} alt={menuData.header.alt} />
             <Nav />
-            <div className={Styles.hamburger}>
+            
+            <StyledHamburger >
                 <Image src={ toggle ? menuData.mobileDrop.close : menuData.mobileDrop.hamburger} alt='mobile-menu' width={24} height= {20} onClick={ () => setToggle(!toggle) } />
-            </div>
+            </StyledHamburger>
 
             { toggle &&  <MobileMenu />}
             
-        </header>
+        </StyledHeader>
     )
 }
 

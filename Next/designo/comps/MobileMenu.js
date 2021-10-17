@@ -1,17 +1,19 @@
 import React from 'react'
 import Nav from './Nav'
-import Styles from '../styles/modules/Header.module.css'
+import {StyledMenu} from '../styles/component-styles/MobileMenu.style'
 
 
 const MobileMenu = () => {
     return (
-        <div className={Styles.mobileMenu} >
+        
+        <StyledMenu >
+            
             <div>
-                <div className="page-container">
-                    <Nav />
-                </div>
+    
+                <Nav />
+                
             </div>      
-        </div>
+        </StyledMenu>
     )
 }
 
