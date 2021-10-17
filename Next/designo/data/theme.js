@@ -40,7 +40,10 @@ const theme = {
       introMobile,
       introTablet
     },
-    bRadius: '15px'
+    bRadius: '15px',
+    maxWidth: '1111px',
+    genPad: '0 20px'
+
 }
 
 export default theme

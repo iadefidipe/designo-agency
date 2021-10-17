@@ -1,7 +1,7 @@
 import {createGlobalStyle} from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap");
+
 
 html,
 body {
@@ -20,48 +20,35 @@ a {
   padding: 0;
 }
 
-:root {
-  /* color */
-  --clr-pry-peach: hsl(11, 73%, 66%);
-  --clr-pry-black: hsl(270, 3%, 11%);
-  --clr-pry-white: hsl(0, 0%, 100%);
 
-  --clr-sec-peach: hsl(11, 100%, 80%);
-  --clr-sec-dark-grey: hsl(264, 5%, 20%);
-  --clr-sec-light-grey: hsl(210, 17%, 95%);
-
-  
-
-  /* media quries */
-  --mobile: 375px;
-  --tablet: 768px;
-}
 
 body {
   font-size: 1rem;
   font-family: "Jost", sans-serif;
   font-size: 1 rem;
   line-height: 1.625rem;
+  color: ${ ({theme}) => theme.colors.pryWhite };
+  height: 100vh;
 }
 
 /* typography */
 h1 {
   font-size: 3rem;
   line-height: 3rem;
-  font-weight: var(--weight-med);
+  font-weight: ${ ({theme}) => theme.weight.mid }  ;
 }
 
 h2 {
   font-size: 2.5rem;
   line-height: 3rem;
-  font-weight: var(--weight-med);
+  font-weight: ${ ({theme}) => theme.weight.mid };
   letter-spacing: 2px;
 }
 
 h3 {
   font-size: 1.25rem;
   line-height: 1.625rem;
-  font-weight: var(--weight-med);
+  font-weight: ${ ({theme}) => theme.weight.mid };
   letter-spacing: 5px;
 }
 
@@ -93,7 +80,7 @@ p {
   h1 {
     font-size: 2rem;
     line-height: 2.25rem;
-    font-weight: var(--weight-med);
+    font-weight:  ${ ({theme}) => theme.weight.mid };
   }
 }
 
@@ -103,5 +90,8 @@ p {
   }
 }
 
-
 `
+ export default GlobalStyles
+
+
+
