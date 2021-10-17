@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const StyledFooter = styled.footer`
-margin-top: 1000px;
-
     background: ${({theme}) => theme.colors.pryBlack};
     padding: 144px 0 50px;
 `

@@ -5,7 +5,8 @@ import threeCircle from '../public/assets/shared/desktop/bg-pattern-three-circle
 import twoCircle from '../public/assets/shared/desktop/bg-pattern-two-circles.svg'
 import introTablet from '../public/assets/shared/tablet/bg-pattern-design-pages-intro-tablet.svg'
 import introMobile from '../public/assets/shared/tablet/bg-pattern-design-pages-intro-tablet.svg'
-
+import bgHome from '../public/assets/home/desktop/bg-pattern-hero-home.svg'
+import leafLeft from '../public/assets/shared/desktop/bg-pattern-leaf-left.svg'
 
 const theme = {
     colors:{
@@ -31,14 +32,16 @@ const theme = {
       deskMid: `${1129/16}rem`
 
     },
-    background:{
+    bg:{
       ctaBg,
       twoCircle,
       threeCircle,
       leaf,
       smCircle,
       introMobile,
-      introTablet
+      introTablet,
+      bgHome,
+      leafLeft
     },
     bRadius: '15px',
     maxWidth: '1111px',

@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { StyledButton } from '../styles/styled-components/component-styles/Button.style'
+import { StyledButton } from '../styles/component-styles/Button.style'
 
 const Button = ({link,text, color, label }) => {
     return (

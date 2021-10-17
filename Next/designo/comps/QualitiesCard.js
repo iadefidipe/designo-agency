@@ -1,5 +1,5 @@
 import React from 'react'
-import { CardContainer, CardContent, CardImage, InnerDiv } from '../styles/styled-components/component-styles/QualitiesCard.style'
+import { CardContainer, CardContent, CardImage, InnerDiv } from '../styles/component-styles/QualitiesCard.style'
 
 const QualitiesCard = ({src,alt,header,des, bg}) => {
     return (
