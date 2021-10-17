@@ -2,15 +2,30 @@ import styled from "styled-components"
 
 
 export const CardContainer = styled.div`
-    display: grid;
-    place-content: center;
-    place-items: center;
-    text-transform: uppercase;
-    text-align: center;
+    
     background: url(${({image}) => image.src}) no-repeat ;
     background-size: cover;
     border-radius: 15px;
-    padding: 20px 0;
+    
+
+    &>div{
+        height: 100%;
+        display: grid;
+        place-content: center;
+        place-items: center;
+        text-transform: uppercase;
+        text-align: center;
+        border-radius: 15px;
+
+
+        &:hover{
+            background-color: #e77f6a5c ;
+
+        }
+        
+    }
+
+ 
     
 `
 
