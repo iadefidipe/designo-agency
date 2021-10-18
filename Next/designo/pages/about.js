@@ -1,27 +1,26 @@
-import React from 'react'
-import { AboutImage, AboutSection, ImageDiv, InnerDiv,  StyledAbout } from '../styles/page-style/about.style'
-import data from '../data/aboutData'
+import React from "react";
+import {
+  AboutImage,
+  AboutSection,
+  ImageDiv,
+  InnerDiv,
+  ContentWrap,
+  ContentImage,
+  StyledAbout,
+} from "../styles/page-style/about.style";
+import data from "../data/aboutData";
+import ContentCard from "../comps/ContentCard";
+import Cta from "../comps/Cta";
 
 const about = () => {
-    return (
-        <StyledAbout>
-            <AboutSection>
+  return (
+    <StyledAbout>
+      <ContentCard hero data={data.sectionOne} />
+      <ContentCard light reverse data={data.sectionTwo} />
+      <ContentCard light data={data.sectionThree} />
+      <Cta />
+    </StyledAbout>
+  );
+};
 
-                <InnerDiv>
-                    <h1>{data.sectionOne.header}</h1>
-                    <p>{data.sectionOne.content.p1}</p>
-                </InnerDiv>
-
-                <ImageDiv>
-                    
-                    <AboutImage src={data.sectionOne.image.imgDesktop} alt={data.sectionOne.image.imgAlt} srcset={`${data.sectionOne.image.imgMobile} 400w, ${data.sectionOne.image.imgTablet} 768w, ${data.sectionOne.image.imgDesktop} 1440w`} layout='fill' />
-                </ImageDiv>
-
-                
-
-            </AboutSection>
-        </StyledAbout>
-    )
-}
-
-export default about
+export default about;
