@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react"
 import {
   CardContainer,
   CardContent,
@@ -6,22 +6,22 @@ import {
   ImageContainer,
   ImageWrap,
   CardImage,
-} from "../styles/component-styles/ContentCard.style";
+} from "../styles/component-styles/ContentCard.style"
 
 const ContentCard = ({ data, light, reverse, hero }) => {
-  const [size, setSize] = useState(1000);
+  const [size, setSize] = useState(1000)
 
   const checkSize = () => {
-    setSize(window.innerWidth);
-  };
+    setSize(window.innerWidth)
+  }
 
   //TODO: Monitor the screen size to enable image responsiveness
   useEffect(() => {
-    window.addEventListener("resize", checkSize);
+    window.addEventListener("resize", checkSize)
     return () => {
-      window.removeEventListener("resize", checkSize);
-    };
-  });
+      window.removeEventListener("resize", checkSize)
+    }
+  })
 
   return (
     <>
@@ -69,10 +69,10 @@ const ContentCard = ({ data, light, reverse, hero }) => {
         </CardContainer>
       )}
     </>
-  );
-};
+  )
+}
 
-export default ContentCard;
+export default ContentCard
 
 {
   /* <>

@@ -1,17 +1,18 @@
-import styled from "styled-components";
-import Image from "next/image";
+import styled from "styled-components"
+import Image from "next/image"
 
 export const CardContainer = styled.section`
   min-height: 480px;
   border-radius: ${({ theme }) => theme.bRadius};
+
   background: ${({ theme, hero, reverse }) => {
     if (hero) {
-      return `url(${theme.bg.bgAboutHero.src}) no-repeat -20px bottom`;
+      return `url(${theme.bg.bgAboutHero.src}) no-repeat -20px bottom`
     }
     if (reverse) {
-      return `url(${theme.bg.twoCircle.src}) no-repeat center bottom`;
+      return `url(${theme.bg.twoCircle.src}) no-repeat center bottom`
     } else {
-      return `url(${theme.bg.twoCircle.src}) no-repeat left bottom`;
+      return `url(${theme.bg.twoCircle.src}) no-repeat left bottom`
     }
   }};
 
@@ -23,15 +24,32 @@ export const CardContainer = styled.section`
   color: ${({ theme, light }) =>
     light ? theme.colors.pryBlack : theme.colors.pryWhite};
 
+  & > div:last-child,
+  & > div:last-child * {
+    border-radius: ${({ theme, reverse }) =>
+      reverse
+        ? `${theme.bRadius} 0 0 ${theme.bRadius} `
+        : `0 ${theme.bRadius} ${theme.bRadius} 0 `};
+  }
+
   @media (max-width: 768px) {
     flex-direction: column-reverse;
     height: 632px;
+    & > div:last-child,
+    & > div:last-child * {
+      border-radius: ${({ theme }) => ` ${theme.bRadius} ${theme.bRadius} 0 0`};
+    }
   }
   @media (max-width: 425px) {
     height: 715px;
     margin: 0;
+    border-radius: 0px;
+    & > div:last-child,
+    & > div:last-child * {
+      border-radius: 0px;
+    }
   }
-`;
+`
 
 export const CardContent = styled.div`
   flex: 1 635px;
@@ -41,7 +59,7 @@ export const CardContent = styled.div`
   @media (max-width: 768px) {
     flex: 1 0px;
   }
-`;
+`
 
 export const ContentWrap = styled.div`
   max-width: 458px;
@@ -62,51 +80,21 @@ export const ContentWrap = styled.div`
     margin-left: 0;
     justify-content: center;
   }
-`;
+`
 
 export const ImageContainer = styled.div`
   flex: 1 476px;
+  /* background-color: green; */
   @media (max-width: 768px) {
     flex: 1 0px;
   }
-
-  & > * {
-    border-radius: ${({ theme }) => `0 ${theme.bRadius} ${theme.bRadius} 0 `};
-  }
-
-  @media (max-width: 768px) {
-    border-radius: ${({ theme }) => ` ${theme.bRadius} ${theme.bRadius} 0 0`};
-  }
-  /* position: relative;  */
-`;
+`
 export const ImageWrap = styled.div`
   height: 100%;
   width: 100%;
   position: relative;
   object-fit: cover;
+  /* background-color: blue; */
+`
 
-  border-radius: ${({ theme, reverse }) =>
-    reverse ? `0px ` : `0 ${theme.bRadius} ${theme.bRadius} 0 `};
-
-  @media (max-width: 768px) {
-    border-radius: ${({ theme }) => ` ${theme.bRadius} ${theme.bRadius} 0 0`};
-  }
-  @media (max-width: 768px) {
-    border-radius: 0px;
-  }
-`;
-
-export const CardImage = styled(Image)`
-  border-radius: ${({ theme, reverse }) =>
-    reverse
-      ? `${theme.bRadius} 0 0 ${theme.bRadius} `
-      : `0 ${theme.bRadius} ${theme.bRadius} 0 `};
-
-  @media (max-width: 768px) {
-    border-radius: ${({ theme }) => ` ${theme.bRadius} ${theme.bRadius} 0 0`};
-  }
-
-  @media (max-width: 768px) {
-    border-radius: 0px;
-  }
-`;
+export const CardImage = styled(Image)``
