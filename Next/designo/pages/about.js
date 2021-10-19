@@ -1,26 +1,33 @@
-import React from "react";
+import React from "react"
 import {
-  AboutImage,
-  AboutSection,
-  ImageDiv,
-  InnerDiv,
-  ContentWrap,
-  ContentImage,
   StyledAbout,
-} from "../styles/page-style/about.style";
-import data from "../data/aboutData";
-import ContentCard from "../comps/ContentCard";
-import Cta from "../comps/Cta";
+  AboutSectionWrap,
+  AboutCta,
+  AboutContainer,
+} from "../styles/page-style/about.style"
+import data from "../data/aboutData"
+import ContentCard from "../comps/ContentCard"
+import Cta from "../comps/Cta"
+import LocationList from "../comps/LocationList"
 
 const about = () => {
   return (
-    <StyledAbout>
-      <ContentCard hero data={data.sectionOne} />
-      <ContentCard light reverse data={data.sectionTwo} />
-      <ContentCard light data={data.sectionThree} />
-      <Cta />
-    </StyledAbout>
-  );
-};
+    <AboutContainer>
+      <StyledAbout>
+        <AboutSectionWrap>
+          <ContentCard hero data={data.sectionOne} />
+          <ContentCard light reverse data={data.sectionTwo} />
+        </AboutSectionWrap>
+        <AboutSectionWrap>
+          <LocationList />
+          <ContentCard light data={data.sectionThree} />
+        </AboutSectionWrap>
+        <AboutCta>
+          <Cta />
+        </AboutCta>
+      </StyledAbout>
+    </AboutContainer>
+  )
+}
 
-export default about;
+export default about
