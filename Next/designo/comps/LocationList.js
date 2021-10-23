@@ -1,12 +1,12 @@
-import React from "react";
-import Button from "./Button";
-import { locationListData } from "../data/LocationData";
+import React from "react"
+import Button from "./Button"
+import { locationListData } from "../data/LocationData"
 import {
   ImageWrap,
   ListContainer,
   ListImage,
   ListWrap,
-} from "../styles/component-styles/LocationList.style";
+} from "../styles/component-styles/LocationList.style"
 
 const LocationList = () => {
   return (
@@ -28,7 +28,7 @@ const LocationList = () => {
         </ListWrap>
       ))}
     </ListContainer>
-  );
-};
+  )
+}
 
-export default LocationList;
+export default LocationList

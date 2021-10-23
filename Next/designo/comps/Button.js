@@ -1,13 +1,15 @@
-import React from 'react'
-import Link from 'next/link'
-import { StyledButton } from '../styles/component-styles/Button.style'
+import React from "react"
+import Link from "next/link"
+import { StyledButton } from "../styles/component-styles/Button.style"
 
-const Button = ({link,text, color, label }) => {
-    return (
-        <Link href={link} passHref ><StyledButton type={color} arial-label={label} >
-              {text}
-          </StyledButton></Link>
-    )
+const Button = ({ link, text, color, label, type }) => {
+  return (
+    <Link href={link} passHref>
+      <StyledButton color={color} arial-label={label} type={type}>
+        {text}
+      </StyledButton>
+    </Link>
+  )
 }
 
 export default Button
