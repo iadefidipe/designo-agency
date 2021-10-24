@@ -11,8 +11,8 @@ import {
 const LocationList = () => {
   return (
     <ListContainer>
-      {locationListData.map((data) => (
-        <ListWrap>
+      {locationListData.map((data, index) => (
+        <ListWrap key={index}>
           <ImageWrap>
             <ListImage src={data.image} alt={data.country} />
           </ImageWrap>

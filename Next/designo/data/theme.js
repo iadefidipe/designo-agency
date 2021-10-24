@@ -1,13 +1,13 @@
-import ctaBg from "../public/assets/shared/desktop/bg-pattern-call-to-action.svg";
-import leaf from "../public/assets/shared/desktop/bg-pattern-leaf.svg";
-import smCircle from "../public/assets/shared/desktop/bg-pattern-small-circle.svg";
-import threeCircle from "../public/assets/shared/desktop/bg-pattern-three-circles.svg";
-import twoCircle from "../public/assets/shared/desktop/bg-pattern-two-circles.svg";
-import introTablet from "../public/assets/shared/tablet/bg-pattern-design-pages-intro-tablet.svg";
-import introMobile from "../public/assets/shared/tablet/bg-pattern-design-pages-intro-tablet.svg";
-import bgHome from "../public/assets/home/desktop/bg-pattern-hero-home.svg";
-import leafLeft from "../public/assets/shared/desktop/bg-pattern-leaf-left.svg";
-import bgAboutHero from "../public/assets/about/desktop/bg-pattern-hero-about-desktop.svg";
+import ctaBg from "../public/assets/shared/desktop/bg-pattern-call-to-action.svg"
+import leaf from "../public/assets/shared/desktop/bg-pattern-leaf.svg"
+import smCircle from "../public/assets/shared/desktop/bg-pattern-small-circle.svg"
+import threeCircle from "../public/assets/shared/desktop/bg-pattern-three-circles.svg"
+import twoCircle from "../public/assets/shared/desktop/bg-pattern-two-circles.svg"
+import introTablet from "../public/assets/shared/tablet/bg-pattern-design-pages-intro-tablet.svg"
+import introMobile from "../public/assets/shared/tablet/bg-pattern-design-pages-intro-tablet.svg"
+import bgHome from "../public/assets/home/desktop/bg-pattern-hero-home.svg"
+import leafLeft from "../public/assets/shared/desktop/bg-pattern-leaf-left.svg"
+import bgAboutHero from "../public/assets/about/desktop/bg-pattern-hero-about-desktop.svg"
 
 const theme = {
   colors: {
@@ -47,6 +47,7 @@ const theme = {
   bRadius: "15px",
   maxWidth: "1111px",
   genPad: "0 20px",
-};
+  center: "0 auto",
+}
 
-export default theme;
+export default theme
