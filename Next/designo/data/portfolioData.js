@@ -1,24 +1,24 @@
-import blogr from "../public/assets/web-design/desktop/image-blogr.jpg";
-import builder from "../public/assets/web-design/desktop/image-builder.jpg";
-import camp from "../public/assets/web-design/desktop/image-camp.jpg";
-import express from "../public/assets/web-design/desktop/image-express.jpg";
-import photon from "../public/assets/web-design/desktop/image-photon.jpg";
-import transfer from "../public/assets/web-design/desktop/image-transfer.jpg";
-import webDesign from "../public/assets/home/desktop/image-web-design-large.jpg";
-import appDesign from "../public/assets/home/desktop/image-app-design.jpg";
-import graphicDesign from "../public/assets/home/desktop/image-graphic-design.jpg";
-import airfilter from "../public/assets/app-design/desktop/image-airfilter.jpg";
-import eyecam from "../public/assets/app-design/desktop/image-eyecam.jpg";
-import faceit from "../public/assets/app-design/desktop/image-faceit.jpg";
-import loopstudios from "../public/assets/app-design/desktop/image-loopstudios.jpg";
-import todo from "../public/assets/app-design/desktop/image-todo.jpg";
-import boxedWater from "../public/assets/graphic-design/desktop/image-boxed-water.jpg";
-import timBrown from "../public/assets/graphic-design/desktop/image-change.jpg";
-import science from "../public/assets/graphic-design/desktop/image-science.jpg";
+import blogr from "../public/assets/web-design/desktop/image-blogr.jpg"
+import builder from "../public/assets/web-design/desktop/image-builder.jpg"
+import camp from "../public/assets/web-design/desktop/image-camp.jpg"
+import express from "../public/assets/web-design/desktop/image-express.jpg"
+import photon from "../public/assets/web-design/desktop/image-photon.jpg"
+import transfer from "../public/assets/web-design/desktop/image-transfer.jpg"
+import webDesign from "../public/assets/home/desktop/image-web-design-large.jpg"
+import appDesign from "../public/assets/home/desktop/image-app-design.jpg"
+import graphicDesign from "../public/assets/home/desktop/image-graphic-design.jpg"
+import airfilter from "../public/assets/app-design/desktop/image-airfilter.jpg"
+import eyecam from "../public/assets/app-design/desktop/image-eyecam.jpg"
+import faceit from "../public/assets/app-design/desktop/image-faceit.jpg"
+import loopstudios from "../public/assets/app-design/desktop/image-loopstudios.jpg"
+import todo from "../public/assets/app-design/desktop/image-todo.jpg"
+import boxedWater from "../public/assets/graphic-design/desktop/image-boxed-water.jpg"
+import timBrown from "../public/assets/graphic-design/desktop/image-change.jpg"
+import science from "../public/assets/graphic-design/desktop/image-science.jpg"
 
 export const portfolioData = [
   {
-    link: "/portfolio/web-design",
+    id: "web-design",
     header: "web design",
     subHeader:
       "We build websites that serve as powerful marketing tools and bring memorable brand experiences.",
@@ -77,14 +77,14 @@ export const portfolioData = [
 
     more: [
       {
-        link: "/portfolio/app-design",
+        id: "app-design",
         header: "app design",
         image: appDesign,
         imageAlt: "a mobile phone",
         class: "small-1",
       },
       {
-        link: "/portfolio/graphic-design",
+        id: "graphic-design",
         header: "graphic design",
         image: graphicDesign,
         imageAlt: "a beautiful design",
@@ -93,7 +93,7 @@ export const portfolioData = [
     ],
   },
   {
-    link: "/portfolio/app-design",
+    id: "app-design",
     header: "app design",
     subHeader:
       "Our mobile designs bring intuitive digital solutions to your customers right at their fingertips.",
@@ -144,14 +144,14 @@ export const portfolioData = [
 
     more: [
       {
-        link: "/portfolio/web-design",
+        id: "web-design",
         header: "web design",
         image: webDesign,
         imageAlt: "a web app",
         class: "large",
       },
       {
-        link: "/portfolio/graphic-design",
+        id: "graphic-design",
         header: "graphic design",
         image: graphicDesign,
         imageAlt: "a beautiful design",
@@ -160,7 +160,7 @@ export const portfolioData = [
     ],
   },
   {
-    link: "/portfolio/graphic-design",
+    id: "graphic-design",
     header: "graphic design",
     subHeader:
       "We deliver eye-catching branding materials that are tailored to meet your business objectives.",
@@ -197,14 +197,14 @@ export const portfolioData = [
 
     more: [
       {
-        link: "/portfolio/app-design",
+        id: "app-design",
         header: "app design",
         image: appDesign,
         imageAlt: "a mobile phone",
         class: "small-1",
       },
       {
-        link: "/portfolio/web-design",
+        id: "web-design",
         header: "web design",
         image: webDesign,
         imageAlt: "a web app",
@@ -212,4 +212,4 @@ export const portfolioData = [
       },
     ],
   },
-];
+]
