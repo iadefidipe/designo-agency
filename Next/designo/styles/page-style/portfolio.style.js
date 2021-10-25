@@ -1,5 +1,16 @@
 import styled from "styled-components"
 
+export const PortfolioPageContainer = styled.div`
+  margin: ${({ theme }) => theme.genPad};
+`
+
+export const PortfolioPageWrap = styled.div`
+  max-width: ${({ theme }) => theme.maxWidth};
+  margin: ${({ theme }) => theme.center};
+  display: flex;
+  flex-direction: column;
+  gap: 160px;
+`
 export const PortfolioHero = styled.section`
   background: ${({ theme }) =>
     `url(${theme.bg.ctaBg.src}) no-repeat right center , ${theme.colors.pryPeach}`};
@@ -10,16 +21,14 @@ export const PortfolioHero = styled.section`
   text-align: center;
   gap: 24px;
 `
-export const PortfolioPageContainer = styled.div`
-  max-width: ${({ theme }) => theme.maxWidth};
-  margin: ${({ theme }) => theme.center};
-`
 export const PortfolioCardContainer = styled.div`
-  margin: 160px 0;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 30px;
+  column-gap: 20px;
   row-gap: 32px;
+  @media (max-width: 1130px) and (min-width: 425px) {
+    flex-direction: column;
+  }
 `
 
 export const PortfolioHeader = styled.h1`
@@ -27,3 +36,24 @@ export const PortfolioHeader = styled.h1`
 `
 export const HeroText = styled.p``
 
+export const PortfolioLinks = styled.section`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 308px;
+  gap: 30px;
+
+  @media (max-width: 1130px) {
+    height: 424px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+`
+export const PortfolioCta = styled.section`
+  transform: translateY(120px);
+  @media (max-width: 768px){
+  transform: translateY(200px);
+  }
+  @media (max-width: 425px){
+  transform: translateY(230px);
+  }
+`

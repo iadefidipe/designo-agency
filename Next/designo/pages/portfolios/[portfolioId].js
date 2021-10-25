@@ -6,23 +6,49 @@ import {
   PortfolioHero,
   PortfolioCardContainer,
   HeroText,
-  
+  PortfolioLinks,
+  PortfolioPageWrap,
+  PortfolioCta,
 } from "../../styles/page-style/portfolio.style"
+import ProjectCards from "../../comps/ProjectCards"
+import Cta from "../../comps/Cta"
+
 
 const Portfolio = ({ portfolio }) => {
   return (
     <>
       <PortfolioPageContainer>
-        <PortfolioHero>
-          <PortfolioHeader>{portfolio.header}</PortfolioHeader>
-          <HeroText>{portfolio.subHeader}</HeroText>
-        </PortfolioHero>
+        <PortfolioPageWrap>
+          <PortfolioHero>
+            <PortfolioHeader>{portfolio.header}</PortfolioHeader>
+            <HeroText>{portfolio.subHeader}</HeroText>
+          </PortfolioHero>
+          <PortfolioCardContainer>
+            {portfolio.projects.map((project, index) => (
+              <Portfoliocard
+                key={index}
+                src={project.image}
+                name={project.name}
+                description={project.description}
+              />
+            ))}
+          </PortfolioCardContainer>
+          <PortfolioLinks>
+            {portfolio.more.map((more) => (
+              <ProjectCards
+                header={more.header}
+                link={more.id}
+                cta={more.cta}
+                image={more.image}
+                key={more.id}
+              />
+            ))}
+          </PortfolioLinks>
 
-        <PortfolioCardContainer>
-          {portfolio.projects.map((project, index) => (
-            <Portfoliocard key={index} src={project.image} name={project.name} description={project.description} />
-          ))}
-        </PortfolioCardContainer>
+          <PortfolioCta>
+            <Cta />
+          </PortfolioCta>
+        </PortfolioPageWrap>
       </PortfolioPageContainer>
     </>
   )
