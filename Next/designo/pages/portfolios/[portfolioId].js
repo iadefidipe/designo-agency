@@ -12,11 +12,16 @@ import {
 } from "../../styles/page-style/portfolio.style"
 import ProjectCards from "../../comps/ProjectCards"
 import Cta from "../../comps/Cta"
-
+import Head from "next/head"
 
 const Portfolio = ({ portfolio }) => {
   return (
     <>
+      <Head>
+        <title>{portfolio.title}</title>
+        <meta name='description' content={portfolio.metaDescription} />
+      </Head>
+
       <PortfolioPageContainer>
         <PortfolioPageWrap>
           <PortfolioHero>
