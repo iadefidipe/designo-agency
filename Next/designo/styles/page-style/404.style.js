@@ -33,10 +33,10 @@ export const PageContent = styled.section`
 export const PageCta = styled.div`
   transform: translateY(132px);
   padding: ${({ theme }) => theme.genPad};
-  @media (max-width: 768px) {
+  @media (max-width: ${({theme}) => theme.queries.tablet}) {
     transform: translateY(180px);
   }
-  @media (max-width: 425px) {
+  @media (max-width: ${({theme}) => theme.queries.mobileL}) {
     transform: translateY(260px);
   }
 `

@@ -25,12 +25,12 @@ export const FormWrap = styled.section`
   & > * {
     flex: 1;
   }
-  @media (max-width: 768px) {
+  @media (max-width: ${({theme}) => theme.queries.tablet}) {
     flex-direction: column;
     padding: 71px 58px;
     background-position: -150px -200px;
   }
-  @media (max-width: 425px) {
+  @media (max-width: ${({theme}) => theme.queries.mobileL}) {
     text-align: center;
     padding: 72px 24px;
     background: ${({ theme }) =>

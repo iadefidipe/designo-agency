@@ -10,7 +10,7 @@ export const LocationPageContainer = styled.div`
 export const LocationCta = styled.section`
   transform: translateY(110px);
   padding: ${({ theme }) => theme.genPad};
-  @media (max-width: 768px) {
+  @media (max-width: ${({theme}) => theme.queries.tablet}) {
     transform: translateY(220px);
   }
 `

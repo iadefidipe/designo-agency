@@ -9,7 +9,6 @@ export const CtaContainer = styled.div`
  width: 100%;
  min-height: 292px;
  padding: 20px 95px;
-
  display: flex;
  align-items: center;
 
@@ -21,20 +20,10 @@ export const CtaContainer = styled.div`
     gap: 32px;
 
  }
-
-
-
- 
- 
-
-
-
-
 `
 
 export const CtaHeader = styled.h2`
 width: 70%;
-
 `
 
 export const CtaDiv = styled.div`
@@ -52,8 +41,6 @@ color: ${ ({theme}) => theme.colors.pryWhite };
         
         justify-content: center;
         align-items: center;
-       
-
         h2{
             width: 50%;
         }
@@ -77,6 +64,4 @@ color: ${ ({theme}) => theme.colors.pryWhite };
      place-content: end;
      
  }
-
-
 `

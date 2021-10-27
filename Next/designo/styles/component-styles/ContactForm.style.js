@@ -26,7 +26,7 @@ export const Form = styled.form`
       font-weight: ${({ theme }) => theme.weight.mid};
     }
 
-    @media (max-width: 768px) {
+    @media (max-width:${({theme}) => theme.queries.tablet}) {
       flex-direction: column;
       width: 100%;
     }
@@ -59,7 +59,7 @@ export const FormButton = styled.button`
     color: ${({ theme }) => theme.colors.pryWhite};
     background: ${({ theme }) => theme.colors.secPeach};
   }
-  @media (max-width: 425px) {
+  @media (max-width:${({theme}) => theme.queries.mobileL}) {
     align-self: center;
   }
 `

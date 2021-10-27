@@ -28,9 +28,13 @@ const theme = {
   },
   queries: {
     mobile: `${375 / 16}rem`,
+    mobileL: `${425 / 16}rem`,
+    mobileXL: `${545 / 16}rem`,
+    tabletMid: `${660 / 16}rem`,
     tablet: `${768 / 16}rem`,
     deskMini: `${976 / 16}rem`,
     deskMid: `${1129 / 16}rem`,
+    deskMed: `${1300 / 16}rem`,
   },
   bg: {
     ctaBg,

@@ -26,7 +26,7 @@ export const PortfolioCardContainer = styled.div`
   flex-wrap: wrap;
   column-gap: 20px;
   row-gap: 32px;
-  @media (max-width: 1130px) and (min-width: 425px) {
+  @media (max-width: ${({theme}) => theme.queries.deskMed}) and (min-width: ${({theme}) => theme.queries.mobileL}) {
     flex-direction: column;
   }
 `
@@ -42,7 +42,7 @@ export const PortfolioLinks = styled.section`
   height: 308px;
   gap: 30px;
 
-  @media (max-width: 1130px) {
+  @media (max-width: ${({theme}) => theme.queries.deskMed}) {
     height: 424px;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
@@ -50,10 +50,10 @@ export const PortfolioLinks = styled.section`
 `
 export const PortfolioCta = styled.section`
   transform: translateY(120px);
-  @media (max-width: 768px){
+  @media (max-width:${({theme}) => theme.queries.tablet}){
   transform: translateY(200px);
   }
-  @media (max-width: 425px){
+  @media (max-width: ${({theme}) => theme.queries.mobileL}){
   transform: translateY(230px);
   }
 `
