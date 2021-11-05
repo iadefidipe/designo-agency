@@ -7,7 +7,7 @@ export const ListContainer = styled.div`
   justify-content: space-between;
   gap: 20px;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({theme}) => theme.queries.tablet}) {
     flex-direction: column;
     gap: 32px;
   }
@@ -26,7 +26,7 @@ export const ListWrap = styled.div`
 
 export const ImageWrap = styled.div`
   background: url(${({ theme }) => theme.bg.smCircle.src}) no-repeat;
-  @media (max-width: 768px) {
+  @media (max-width: ${({theme}) => theme.queries.tablet}) {
     flex: 1;
   }
 `;

@@ -32,7 +32,7 @@ export const CardContainer = styled.section`
         : `0 ${theme.bRadius} ${theme.bRadius} 0 `};
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({theme}) => theme.queries.tablet}) {
     flex-direction: column-reverse;
     height: 632px;
     & > div:last-child,
@@ -40,7 +40,7 @@ export const CardContainer = styled.section`
       border-radius: ${({ theme }) => ` ${theme.bRadius} ${theme.bRadius} 0 0`};
     }
   }
-  @media (max-width: 425px) {
+  @media (max-width: ${({theme}) => theme.queries.mobileL}) {
     height: 715px;
     margin: 0;
     border-radius: 0px;
@@ -56,7 +56,7 @@ export const CardContent = styled.div`
   display: flex;
   align-items: center;
   padding: 1rem;
-  @media (max-width: 768px) {
+  @media (max-width:${({theme}) => theme.queries.mobileL}) {
     flex: 1 0px;
   }
 `
@@ -74,7 +74,7 @@ export const ContentWrap = styled.div`
     color: ${({ theme, light }) =>
       light ? theme.colors.pryPeach : theme.colors.pryWhite};
   }
-  @media (max-width: 768px) {
+  @media (max-width: ${({theme}) => theme.queries.tablet}) {
     max-width: 100%;
     text-align: center;
     margin-left: 0;
@@ -85,7 +85,7 @@ export const ContentWrap = styled.div`
 export const ImageContainer = styled.div`
   flex: 1 476px;
   /* background-color: green; */
-  @media (max-width: 768px) {
+  @media (max-width: ${({theme}) => theme.queries.tablet}) {
     flex: 1 0px;
   }
 `

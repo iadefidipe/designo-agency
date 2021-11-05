@@ -23,13 +23,13 @@ export const AboutContainer = styled.div`
   background: ${({ theme }) =>
     `url(${theme.bg.leafLeft.src}) no-repeat left 150px, url(${theme.bg.leaf.src}) no-repeat 800px 1400px`};
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({theme}) => theme.queries.tablet}) {
     background: none;
   }
 `
 
 export const AboutSectionWrap = styled.div`
-  @media (max-width: 425px) {
+  @media (max-width: ${({theme}) => theme.queries.mobileL}) {
     &:first-child {
       gap: 0;
     }
@@ -38,10 +38,12 @@ export const AboutSectionWrap = styled.div`
 export const AboutCta = styled.div`
   transform: translateY(132px);
   padding: ${({ theme }) => theme.genPad};
-  @media (max-width: 768px) {
+  @media (max-width: ${({theme}) => theme.queries.tablet}) {
     transform: translateY(180px);
   }
-  @media (max-width: 425px) {
+  @media (max-width: ${({theme}) => theme.queries.mobileL}) {
     transform: translateY(260px);
   }
 `
+
+

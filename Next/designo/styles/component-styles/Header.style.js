@@ -15,7 +15,7 @@ export const StyledHeader = styled.header`
         color: ${ ({theme}) => theme.colors.pryBlack};
     }
 
-    @media (max-width: 720px) { 
+    @media (max-width: ${({theme}) => theme.queries.tablet}) { 
         & > nav {
             display: none;
         }
@@ -25,7 +25,7 @@ export const StyledHeader = styled.header`
 export const  StyledHamburger = styled.div`
     display: none;
 
-    @media (max-width: 720px) {
+    @media (max-width: ${({theme}) => theme.queries.tablet}) {
 
         display: block;
     }

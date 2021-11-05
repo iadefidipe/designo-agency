@@ -4,13 +4,13 @@ export const StyledMenu = styled.div`
 
 
 
-    @media (min-width: 720px) {
+    @media (min-width: ${({theme}) => theme.queries.tablet}) {
         display: none;
     }
 
    
 
-    @media (max-width: 720px) {
+    @media (max-width: ${({theme}) => theme.queries.tablet}) {
         position: absolute;
         left: 0;
         right: 0;

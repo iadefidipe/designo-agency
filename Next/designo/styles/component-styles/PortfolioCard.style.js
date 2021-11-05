@@ -17,7 +17,7 @@ export const PortfolioCard = styled.div`
     }
   }
 
-  @media (max-width: 1130px) and (min-width: 425px) {
+  @media (max-width: ${({theme}) => theme.queries.deskMid}) and (min-width: ${({theme}) => theme.queries.mobileL}) {
     flex-direction: row;
     height: 310px;
     max-width: 100%;
@@ -26,14 +26,14 @@ export const PortfolioCard = styled.div`
 export const CardImgWrap = styled.div`
   position: relative;
   flex: 1.7;
-  @media (max-width: 1130px) and (min-width: 425px) {
+  @media (max-width: ${({theme}) => theme.queries.deskMid}) and (min-width: ${({theme}) => theme.queries.mobileL}) {
     flex: 1;
 
   }
 `
 export const CardImage = styled(Image)`
   border-radius: ${({ theme }) => ` ${theme.bRadius}  ${theme.bRadius} 0 0 `};
-  @media (max-width: 1130px) and (min-width: 425px) {
+  @media (max-width: ${({theme}) => theme.queries.deskMid}) and (min-width:${({theme}) => theme.queries.mobileL}) {
     border-radius: ${({ theme }) => ` ${theme.bRadius} 0 0 ${theme.bRadius} `};
   }
 `

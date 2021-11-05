@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
           rel='icon'
           type='image/png'
           sizes='32x32'
-          href='../public/favicon-32x32.png'
+          href='/favicon-32x32.png'
         />
 
         <title>Designo - Software Development Agency</title>
@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }) {
         />
         <meta
           property='og:image'
-          content='https://designo-agency-psi.vercel.app/public/assets/shared/desktop/preview.jpg'
+          content='https://designo-agency-psi.vercel.app/public/preview.jpg'
         />
         <meta property='og:image:width' content='1200' />
         <meta property='og:image:height' content='630' />
