@@ -20,19 +20,24 @@ const useForm = (validateForm) => {
   //TODO: Handle => Form is submited successfully when all input conditions are met
   const handleSubmit = (e) => {
     e.preventDefault()
+   
+    // checks values for errors
     setErrors(validateForm(values))
+    console.log(errors)
 
-    if (Object.keys(errors).length === 0 && errors.constructor === Object) {
-      setIsSubmitting(true)
-      setValues({
-        name: "",
-        email: "",
-        phone: "",
-        message: "",
-      })
-    } else {
-      setIsSubmitting(false)
-    }
+    // if (Object.keys(errors).length === 0 && errors.constructor === Object) {
+    //   setIsSubmitting(true)
+    //   setValues({
+    //     name: "",
+    //     email: "",
+    //     phone: "",
+    //     message: "",
+    //   })
+    // } else {
+    //   setIsSubmitting(false)
+    // }
+
+    console.log(values)
   }
 
   return { handleChange, handleSubmit, values, errors, isSubmitting }

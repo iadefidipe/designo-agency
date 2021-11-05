@@ -31,13 +31,14 @@ export const Form = styled.form`
       width: 100%;
     }
 
-    ${({ error }) =>
+    /* ${({ error }) =>
       error &&
       css`
         width: 40%;
-      `};
+      `}; */
   }
 `
+export const Error = styled.div``
 export const FormInput = styled.div``
 
 export const FormButton = styled.button`
