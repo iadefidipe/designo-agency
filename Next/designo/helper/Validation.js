@@ -2,7 +2,7 @@
 const validEmail = new RegExp("^[a-zA-Z0-9._:$!%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]$")
 
 //TODO: Function to validate the contact form
-export const validateForm = (values) => {
+const validateForm = (values) => {
   let errors = {}
 
   //* => Validate Name
@@ -31,3 +31,5 @@ export const validateForm = (values) => {
 
   return errors
 }
+
+export default validateForm 
