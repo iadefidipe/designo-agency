@@ -1,5 +1,5 @@
    
-import Document from 'next/document'
+import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from 'styled-components'
 
 export default class MyDocument extends Document {
@@ -28,4 +28,54 @@ export default class MyDocument extends Document {
       sheet.seal()
     }
   }
+
+  render() {
+    return (
+      <Html lang="en">
+        <Head>
+        <link
+          rel='icon'
+          type='image/png'
+          sizes='32x32'
+          href='/favicon-32x32.png'
+        />
+          {/* <!-- THEME COLOR FOR CHROME MOBILE BROWSERS --> */}
+          <title>Designo - Software Development Agency</title>
+        <meta name="theme-color" content="#E7816B"/>
+          <meta name="twitter:card" content="summary" key="twcard" />
+          <meta name="twitter:creator" content="designo" key="twhandle" />
+          <meta
+            property="og:url"
+            content="https://designo-agency-psi.vercel.app/"
+            key="ogurl"
+          />
+          <meta
+            property="og:image"
+            content="https://designo-agency-psi.vercel.app/preview.jpg"
+            key="ogimage"
+          />
+          <meta property="og:site_name" content="audiophile" key="ogsitename" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <link rel="apple-touch-icon" href="/favicon.png" />
+          <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;500;700&display=swap"
+            rel="stylesheet"
+          />
+          <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+            integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+            crossOrigin="anonymous"
+          ></link>
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
 }
+
