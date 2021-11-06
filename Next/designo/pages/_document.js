@@ -33,14 +33,25 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+        <meta charset='UTF-8' />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <link
           rel='icon'
           type='image/png'
           sizes='32x32'
           href='/favicon-32x32.png'
         />
+        <title>Designo - Software Development Agency</title>
+        <meta
+          name='description'
+          content='Designo is a world-class software development agency that focuses on building innovative tech solutions like web apps, mobile apps and graphics design.'
+        />
+        <meta
+          name='keyword'
+          content='web, software agency, web design, graphic design'
+        />
           {/* <!-- THEME COLOR FOR CHROME MOBILE BROWSERS --> */}
-          <title>Designo - Software Development Agency</title>
+          
         <meta name="theme-color" content="#E7816B"/>
           <meta name="twitter:card" content="summary" key="twcard" />
           <meta name="twitter:creator" content="designo" key="twhandle" />
@@ -54,7 +65,7 @@ export default class MyDocument extends Document {
             content="https://designo-agency-psi.vercel.app/preview.jpg"
             key="ogimage"
           />
-          <meta property="og:site_name" content="audiophile" key="ogsitename" />
+          <meta property="og:site_name" content="designo" key="ogsitename" />
           <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="630" />
           <link rel="apple-touch-icon" href="/favicon.png" />
