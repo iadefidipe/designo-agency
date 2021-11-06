@@ -31,11 +31,11 @@ export const menuData = {
   },
   contact: {
     title: "Contact Us (Central Office)",
-    phone: "+1 253-863-8967",
-    phoneLink: "tel:+1 253-863-8967",
+    phone: "+234 813-9055-161",
+    phoneLink: "tel:+234 813-9055-161",
     phoneLabel: "call us via our official number",
-    email: "contact@designo.co",
-    emailLink: "mailto:contact@designo.co",
+    email: "israeladefidipe@gmail.com",
+    emailLink: "mailto:israeladefidipe@gmail.com",
     emailLabel: "send us an email"
   },
   social: [
@@ -52,7 +52,7 @@ export const menuData = {
     {
       label: "follow us on twitter",
       icon: twitter,
-      link: "https://twitter.com.designo",
+      link: "https://twitter.com/iadefidipe",
     },
     {
       label: "join us on pinterest",
