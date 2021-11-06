@@ -7,17 +7,16 @@ export const Form = styled.form`
 
   input,
   textarea {
+    flex: 1;
     border: none;
     width: 100%;
     background: transparent;
-    border-bottom: 1px solid ${({ theme }) => theme.colors.pryWhite};
     color: ${({ theme }) => theme.colors.pryWhite};
     font-size: 15px;
     padding: 11px;
 
     &:focus,
     &::selection {
-      border-bottom: 1px solid ${({ theme }) => theme.colors.pryWhite};
       outline: none;
     }
 
@@ -26,20 +25,22 @@ export const Form = styled.form`
       font-weight: ${({ theme }) => theme.weight.mid};
     }
 
-    @media (max-width:${({theme}) => theme.queries.tablet}) {
+    @media (max-width: ${({ theme }) => theme.queries.tablet}) {
       flex-direction: column;
       width: 100%;
     }
 
-    /* ${({ error }) =>
-      error &&
-      css`
-        width: 40%;
-      `}; */
+  
   }
 `
-export const Error = styled.div``
-export const FormInput = styled.div``
+export const Error = styled.div`
+  flex: 1;
+  font-size: 12px;
+`
+export const FormInput = styled.div`
+  display: flex;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.pryWhite};
+`
 
 export const FormButton = styled.button`
   align-self: flex-end;
@@ -60,7 +61,7 @@ export const FormButton = styled.button`
     color: ${({ theme }) => theme.colors.pryWhite};
     background: ${({ theme }) => theme.colors.secPeach};
   }
-  @media (max-width:${({theme}) => theme.queries.mobileL}) {
+  @media (max-width: ${({ theme }) => theme.queries.mobileL}) {
     align-self: center;
   }
 `
@@ -78,3 +79,8 @@ export const HiddenLabel = styled.label`
   width: 1px !important;
   white-space: nowrap !important;
 `
+// export const Notification = styled.div`
+//   width: 200px;
+//   height: 80px;
+//   background-color: ${ ({theme}) => theme.n };
+// `
