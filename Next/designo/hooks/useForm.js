@@ -1,46 +1,47 @@
-import { useState } from "react"
+import { useState, useEffect} from "react"
+import validateForm from "../helper/Validation"
 
-const useForm = (validateForm) => {
+
+const useForm = () => {
+  // ? form values are updated to state on change events
   const [values, setValues] = useState({
     name: "",
     email: "",
     phone: "",
-    message: "",
+    nessage: "",
   })
-  const [errors, setErrors] = useState(false)
-  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  //TODO: Handle => Form input names and values are extracted. The results are push into the "values" state
-  const handleChange = (e) => {
-    const name = e.target.name
-    const value = e.target.value
-    setValues({ ...values, [name]: value })
-  }
+  // ? erros updates after passing validations test
+  const [errors, setErrors] = useState({})
+  const [sucess, setSucess] = useState(false)
+  const [dataIsCorrect, setDataIsCorrect] = useState(false)
 
-  //TODO: Handle => Form is submited successfully when all input conditions are met
   const handleSubmit = (e) => {
     e.preventDefault()
-   
-    // checks values for errors
     setErrors(validateForm(values))
-    console.log(errors)
-
-    // if (Object.keys(errors).length === 0 && errors.constructor === Object) {
-    //   setIsSubmitting(true)
-    //   setValues({
-    //     name: "",
-    //     email: "",
-    //     phone: "",
-    //     message: "",
-    //   })
-    // } else {
-    //   setIsSubmitting(false)
-    // }
-
-    console.log(values)
+    setDataIsCorrect(true)
+    
+  }
+  const handleChange = (e) => {
+    setValues({
+      ...values,
+      [e.target.name]: e.target.value,
+    })
   }
 
-  return { handleChange, handleSubmit, values, errors, isSubmitting }
+  useEffect(() => {
+    if (Object.keys(errors).length === 0 && dataIsCorrect) {
+      setSucess(true)
+      setValues({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    }
+  }, [errors])
+
+  return { handleChange, handleSubmit, values, errors, sucess}
 }
 
 export default useForm
