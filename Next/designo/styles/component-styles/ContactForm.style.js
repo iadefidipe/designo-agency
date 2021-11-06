@@ -29,8 +29,9 @@ export const Form = styled.form`
       flex-direction: column;
       width: 100%;
     }
-
-  
+    @media (max-width: ${({ theme }) => theme.queries.deskMid}) {
+      border-bottom: 1px solid ${({ theme }) => theme.colors.pryWhite};
+  }
   }
 `
 export const Error = styled.div`
@@ -40,6 +41,11 @@ export const Error = styled.div`
 export const FormInput = styled.div`
   display: flex;
   border-bottom: 1px solid ${({ theme }) => theme.colors.pryWhite};
+
+  @media (max-width: ${({ theme }) => theme.queries.deskMid}) {
+    display: block;
+    border-bottom: none;
+  }
 `
 
 export const FormButton = styled.button`
