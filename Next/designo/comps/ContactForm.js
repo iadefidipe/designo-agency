@@ -6,38 +6,12 @@ import {
   FormButton,
   Error,
 } from "../styles/component-styles/ContactForm.style"
-import { validateForm } from "../helper/Validation"
+import useForm from "../hooks/useForm"
+
 // import useForm from "../hooks/useForm"
 
 const ContactForm = () => {
-  const [values, setValues] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    nessage: "",
-  })
-
-  const [errors, setErrors] = useState({})
-  const [sucess, setSucess] = useState(false)
-  const [dataIsCorrect, setDataIsCorrect] = useState(false)
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    setErrors(validateForm(values))
-    setDataIsCorrect(true)
-  }
-  const handleChange = (e) => {
-    setValues({
-      ...values,
-      [e.target.name]: e.target.value,
-    })
-  }
-
-  useEffect( () => {
-    if(Object.keys(errors).length === 0 && dataIsCorrect){
-      setSucess(true)
-    }
-  } )
+  const { handleChange, handleSubmit, values, errors, sucess } = useForm()
 
   return (
     <>
