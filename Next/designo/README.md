@@ -1,34 +1,164 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Mentor - Designo agency website solution
 
-## Getting Started
+This is a solution to the [Designo agency website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/designo-multipage-website-G48K6rfUT). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-First, run the development server:
+## Table of contents
 
-```bash
-npm run dev
-# or
-yarn dev
+- [Frontend Mentor - Designo agency website solution](#frontend-mentor---designo-agency-website-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+    - [Continued development](#continued-development)
+    - [Useful resources](#useful-resources)
+  - [Author](#author)
+  - [Acknowledgments](#acknowledgments)
+
+
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- View the optimal layout for each page depending on their device's screen size
+- See hover states for all interactive elements throughout the site
+- Receive an error message when the contact form is submitted if:
+  - The `Name`, `Email Address` or `Your Message` fields are empty should show "Can't be empty"
+  - The `Email Address` is not formatted correctly should show "Please use a valid email address"
+- **Bonus**: View actual locations on the locations page maps (we recommend [Leaflet JS](https://leafletjs.com/) for this)
+
+### Screenshot
+
+![](./Screenshot.png)
+
+### Links
+
+- Solution URL: [Add solution URL here](https://github.com/iadefidipe/designo-agency)
+- Live Site URL: [Add live site URL here](https://designo-agency-psi.vercel.app/)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- [React](https://reactjs.org/) - JS library
+- [Next.js](https://nextjs.org/) - React framework
+- [Styled Components](https://styled-components.com/) - For styles
+
+
+
+### What I learned
+
+- The first challenge for me on this project was working with images, especially styling next images. But it all became clear when I read the [documentation](https://nextjs.org/docs/api-reference/next/image). Rendering images in Next js is one of its super power as it renders optimised images.
+- Pre-rendering pages dynamically:
+```js
+export const getStaticPaths = async () => {
+  const paths = portfolioData.map((portfolio) => {
+    return {
+      params: { portfolioId: portfolio.id },
+    }
+  })
+
+  return {
+    paths: paths,
+    fallback: false,
+  }
+}
+
+export const getStaticProps = async (context) => {
+  const id = context.params.portfolioId
+  const data = portfolioData.find((port) => {
+    return port.id === id
+  })
+
+  return {
+    props: {
+      portfolio: data,
+    },
+  }
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Created a custom hook for validation of forms:
+```js
+const useForm = () => {
+  // ? form values are updated to state on change events
+  const [values, setValues] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    nessage: "",
+  })
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+  // ? erros updates after passing validations test
+  const [errors, setErrors] = useState({})
+  const [sucess, setSucess] = useState(false)
+  const [dataIsCorrect, setDataIsCorrect] = useState(false)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    setErrors(validateForm(values))
+    setDataIsCorrect(true)
+    
+  }
+  const handleChange = (e) => {
+    setValues({
+      ...values,
+      [e.target.name]: e.target.value,
+    })
+  }
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+  useEffect(() => {
+    if (Object.keys(errors).length === 0 && dataIsCorrect) {
+      setSucess(true)
+      setValues({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    }
+  }, [errors])
 
-## Learn More
+  return { handleChange, handleSubmit, values, errors, sucess}
+}
 
-To learn more about Next.js, take a look at the following resources:
+export default useForm
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Continued development
+- Next Js Static and server-side rendering
+- Better state management in react: redux and context api
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Useful resources
+
+- [Next Js Documentation](https://www.example.comhttps://nextjs.org/docs/getting-started) - The best way to understand any technology well, is by reading through the documentation.
+- 
+- [Net Ninja Next js for beginners playlist](https://www.youtube.com/playlist?list=PL4cUxeGkcC9g9gP2onazU5-2M-AzA8eBw) - Helped me get start with the basics of the Next
+- [Code Evolution Next js for beginners playlist](https://www.youtube.com/playlist?list=PLC3y8-rFHvwgC9mj0qv972IO5DmD-H0ZH) - More indepth course on Next js
+- [React form using custom hooks](https://www.youtube.com/watch?v=WvRwiE9IkFg) 
+
+
+## Author
+
+- Website - [Israel Adefidipe](https://iadefidipe.netlify.app/)
+- Frontend Mentor - [@iadefidipe](https://www.frontendmentor.io/profile/iadefidipe)
+- Twitter - [@iadefidipe](https://www.twitter.com/iadefidipe)
+- LinkedIn - [@iadefidipe](https://www.linkedin.com/in/iadefidipe/)
+
+
+## Acknowledgments
+
+- [Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects. These premium challenges are perfect portfolio pieces, so please feel free to use what you create in your portfolio to show others
