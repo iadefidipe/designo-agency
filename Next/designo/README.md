@@ -58,7 +58,7 @@ Users should be able to:
 ### What I learned
 
 - The first challenge for me on this project was working with images, especially styling next images. But it all became clear when I read the [documentation](https://nextjs.org/docs/api-reference/next/image). Rendering images in Next js is one of its super power as it renders optimised images.
-- Pre-rendering pages dynamically:
+- Pre-rendering portfolio pages dynamically:
 ```js
 export const getStaticPaths = async () => {
   const paths = portfolioData.map((portfolio) => {
@@ -139,13 +139,12 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 
 
 ### Continued development
-- Next Js Static and server-side rendering
+- I will be working more on getting a good grasp of Next Js Static and server-side rendering and when to apply them in future projects
 - Better state management in react: redux and context api
 
 ### Useful resources
 
 - [Next Js Documentation](https://www.example.comhttps://nextjs.org/docs/getting-started) - The best way to understand any technology well, is by reading through the documentation.
-- 
 - [Net Ninja Next js for beginners playlist](https://www.youtube.com/playlist?list=PL4cUxeGkcC9g9gP2onazU5-2M-AzA8eBw) - Helped me get start with the basics of the Next
 - [Code Evolution Next js for beginners playlist](https://www.youtube.com/playlist?list=PLC3y8-rFHvwgC9mj0qv972IO5DmD-H0ZH) - More indepth course on Next js
 - [React form using custom hooks](https://www.youtube.com/watch?v=WvRwiE9IkFg) 
